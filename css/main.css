@@ -19,14 +19,13 @@ body {
 }
 
 
-
 /* HEADER */
 .page__header {}
 
 .nav-trigger {
   height: 45px;
   width: 45px;
-  background: url('../images/ico-menu.svg') #212121 center no-repeat;
+  background: url('../images/ico-menu.svg') #212121e5 center no-repeat;
   outline: none;
   border: none;
   border-radius: 5px;
@@ -34,19 +33,36 @@ body {
   position: fixed;
   top: 20px;
   right: 20px;
+  display: block;
+  color: transparent;
 }
-
 
 
 /* MENU */
 .nav {
   background-color: #402929;
   opacity: 0.92;
+  height: 100vh;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
   display: none;
 }
 
 .nav__items {
+  height: 100vh;
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  line-height: 55px;
 }
 
 .nav__item {
@@ -60,21 +76,23 @@ body {
 .nav-close {
   height: 45px;
   width: 45px;
-  background: url('../images/ico-close.svg') #212121 center no-repeat;
+  background: url('../images/ico-close.svg') #0f0f0f center no-repeat;
   outline: none;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   position: fixed;
-  top: 15px;
-  right: 15px;
+  top: 20px;
+  right: 20px;
+  color: transparent;
 }
-
 
 
 /* MAIN */
 .page__main {
   flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 .page__wrapper {
@@ -84,8 +102,8 @@ body {
 .page__main-title {
   text-transform: uppercase;
   color: #ffffff;
-  font-size: 25px;
-  max-width: 50vw;
+  font-size: 30px;
+  max-width: 30vw;
 }
 
 
@@ -94,8 +112,8 @@ body {
 .page__footer {}
 
 .page__footer {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   margin-bottom: 15px;
 }
 
@@ -104,14 +122,23 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  background: #80808071;
+  background: #8080805d;
   border-radius: 3px;
   height: 30px;
-  width: 70vw;
   color: #727070;
 }
 
 
 /* MEDIAQUERIES */
-/* @media all and (min-width: 768px) {} */
+@media all and (min-width: 768px) {
+
+  .page__wrapper {
+    margin: 0 60px;
+    max-width: 990px;
+  }
+
+  .page__main-title {
+    font-size: 50px;
+  }
+}
 /* @media all and (min-width: 1440px) {} */
