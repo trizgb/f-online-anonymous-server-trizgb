@@ -37,6 +37,11 @@ body {
   color: transparent;
 }
 
+.nav-trigger:hover {
+  animation: beat .30s infinite alternate;
+
+}
+
 
 /* MENU */
 .nav {
@@ -73,6 +78,10 @@ body {
   text-decoration: none;
 }
 
+.nav__link:hover {
+  text-decoration-line: underline;
+}
+
 .nav-close {
   height: 45px;
   width: 45px;
@@ -85,6 +94,14 @@ body {
   top: 20px;
   right: 20px;
   color: transparent;
+}
+
+.nav-close:hover {
+  animation: beat .30s infinite alternate;
+}
+
+@keyframes beat{
+	to { transform: scale(1.1); }
 }
 
 
