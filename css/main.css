@@ -39,24 +39,27 @@ body {
 
 .nav-trigger:hover {
   animation: beat .30s infinite alternate;
-
 }
 
 
 /* MENU */
 .nav {
+  position: fixed;
   background-color: #402929;
   opacity: 0.92;
   height: 100vh;
-  display: none;
+  width: 100vw;
+  right: -100vw;
 }
 
 .show {
-  display: block;
+  right: 0;
+  transition: all 0.5s;
 }
 
 .hide {
-  display: none;
+  right: -100vw;
+  transition: all 0.5s;
 }
 
 .nav__items {
@@ -92,8 +95,8 @@ body {
   cursor: pointer;
   position: fixed;
   top: 20px;
-  right: 20px;
   color: transparent;
+  right: -100vw;
 }
 
 .nav-close:hover {
@@ -102,6 +105,11 @@ body {
 
 @keyframes beat{
 	to { transform: scale(1.1); }
+}
+
+.show .nav-close {
+  right: 20px;
+  transition: all 0.5s;
 }
 
 
@@ -119,16 +127,13 @@ body {
 .page__main-title {
   text-transform: uppercase;
   color: #ffffff;
-  font-size: 30px;
+  font-size: 2em;
   max-width: 30vw;
 }
 
 
-
 /* FOOTER */
 .page__footer {
-  /* display: flex;
-  justify-content: center; */
   margin-bottom: 15px;
 }
 
